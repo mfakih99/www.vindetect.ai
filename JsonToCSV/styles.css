@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.converter-box {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: start;
+    min-width: 0;
+}
+
+.input-section, .output-section {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 300px;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    resize: none;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.preview-box {
+    width: 100%;
+    height: 300px;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-color: #fafafa;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre;
+    word-break: normal;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-btn {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #357abd;
+}
+
+.secondary-btn {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.secondary-btn:hover:not(:disabled) {
+    background-color: #d0d0d0;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 1rem;
+    min-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .converter-box {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+} 
